@@ -1,0 +1,16 @@
+version: '3.7'
+services: 
+    node-cli:
+        build: 
+            context: docker/node
+        volumes:
+            - ./frontend:/app
+
+    node-dev:
+        build: 
+            context: docker/node
+        ports:
+            - 3000:3000
+        volumes:
+            - ./application:/app
+        command: sh -c "yarn install && yarn run dev"
