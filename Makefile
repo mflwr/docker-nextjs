@@ -13,9 +13,6 @@ docker-pull:
 docker-build:
 	docker-compose build --pull
 
-dev:
-	docker-compose run --rm node-dev
-
 up:
 	docker-compose up -d
 
